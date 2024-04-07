@@ -1,0 +1,30 @@
+.dashboard{
+    background-color: gray;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title{
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: #111;
+        padding: 16px;
+
+    }
+    .btn{
+        position: absolute;
+        right: 1rem;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+
+    }
+}
+.buildings{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px; 
+    gap: 10px; 
+}

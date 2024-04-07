@@ -1,9 +1,10 @@
-import DashboardPage from "./dashboard/page";
+import BuildingsPage from "./buildings/page";
+
 
 export default function Home() {
   return (
    <div>
-    <DashboardPage/>
+    <BuildingsPage/>
    </div>
   );
 }

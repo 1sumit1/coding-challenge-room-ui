@@ -1,0 +1,57 @@
+.model{
+    background: #ffffff;
+    border-radius: 0.5em;
+    box-shadow: 0 10px 20px rgba(black, 0.2);
+    left: 50%;
+    max-width: 90%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30em;
+    text-align: left;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    .close {
+        position: absolute;
+        right: 5px;
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+  
+        &:hover,
+        &:focus {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    h3{
+        text-align: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 5px;
+
+        label{
+            font-size: 15px;
+            font-weight: 500;
+        }
+        input{
+            height: 25px;
+            padding: 4px;
+        }
+        button{
+            margin-top: 30px;
+            height: 35px;
+            background-color: rgb(6, 81, 6);
+            color: #ffffff;
+            cursor: pointer;
+        }
+    }
+}

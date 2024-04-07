@@ -25,6 +25,36 @@ export const createBuilding= async (req,res)=>{
     }
 }
 
+export const getAllBuilding=async (req,res)=>{
+  try {
+    const buildings = await Building.find();
+
+    res.status(200).json(buildings);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Error fetching buildings' });
+  }
+}
+
+export const getBuildingById = async (req, res) => {
+  try {
+    const buildingId = req.params.id;
+    const building = await Building.findById(buildingId);
+
+    if (!building) {
+      return res.status(404).json({ message: 'Building not found' });
+    }
+
+    res.status(200).json(building);
+  } catch (err) {
+    console.error(err);
+    if (err.kind === 'ObjectId') {
+      return res.status(400).json({ message: 'Invalid building ID' });
+    }
+    res.status(500).json({ message: 'Error fetching building' });
+  }
+};
+
 
 const determineHeatingCooling = (roomTemperature, buildingTemperature) => {
     if (roomTemperature < buildingTemperature) {

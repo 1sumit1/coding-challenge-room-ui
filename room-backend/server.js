@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv'
 import buildingRoute from './routes/building.routes.js';
+import cors from 'cors'
 
 
 const app=express();
@@ -17,6 +18,7 @@ const Connect=async ()=>{
 }
 
 app.use(express.json());
+app.use(cors({origin:"http://localhost:3000",credentials:true}))
 
 app.use('/api',buildingRoute);
 
